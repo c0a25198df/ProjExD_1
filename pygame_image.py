@@ -14,7 +14,7 @@ def main():
     kk_img = pg.image.load("fig/3.png")#練習3
     kk_img = pg.transform.flip(kk_img, True, False)#練習3
     kk_rct = kk_img.get_rect()#10-1
-    kk_rct.center = 300, 200#10-2
+    kk_rct.center = 300, 200 #10-2
     screen.blit(kk_img, kk_rct)
     tmr = 0
     while True:
@@ -24,6 +24,7 @@ def main():
 
             
         key_lst = pg.key.get_pressed() #10-3
+        kk_rct.move_ip((-1,0))#e-1-1
         if key_lst[pg.K_UP]:
             kk_rct.move_ip((0, -1))
         
@@ -31,7 +32,7 @@ def main():
             kk_rct.move_ip((0, 1))
 
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+            kk_rct.move_ip((2, 0)) #e-1-2
 
         if key_lst[pg.K_LEFT]:
             kk_rct.move_ip((-1, 0))
